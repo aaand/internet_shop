@@ -31,5 +31,6 @@ REST-интерфейс для интернет-магазина.
 - Product Update: метод:PUT, URL:http://127.0.0.1:8000/api/products/{id} (params: category_id, name, description, price, count)
 - Product Delete: метод:DELETE, URL:http://127.0.0.1:8000/api/products/{id}
 
+Для методов api/login, api/register и api/products, аутентификация не нужна, для остальных нужна.
 При регистрации api/register возвращается токен, его еще можно получить методом api/login передав логин и пароль пользователя.
 В методах работы с контактами необходимо передавать полученный токен в Headers в поле Authorization. Например Authorization Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1...
