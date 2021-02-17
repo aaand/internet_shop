@@ -19,6 +19,7 @@ class ShowService
             'description' => $product->description,
             'price' => $product->price,
             'count' => $product->count,
+            'category' => $product->category->name,
             'history' => $product->historys,
         ];
         return $res;

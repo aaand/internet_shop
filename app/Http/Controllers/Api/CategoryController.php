@@ -12,7 +12,6 @@ use App\Services\Category\FetchService;
 use App\Http\Controllers\Api\BaseController as BaseController;
 use Validator;
 
-//use App\Http\Requests\CategoryFormRequest;
 
 class CategoryController extends BaseController
 {

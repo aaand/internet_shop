@@ -14,11 +14,17 @@ class FetchService
     public function make()
     {
         $categorys = Category::all();
+        $res = [];
         foreach ($categorys as $category) {
-            $category->description = substr($category->description, 0, 100);
-            $category->product_count = $category->products()->count();
+            $category_ar = [
+                'id' => $category->id,
+                'name' => $category->name,
+                'description' => substr($category->description, 0, 100),
+                'product_count' => $category->products()->count(),
+            ];
+            array_push($res, $category_ar);
         }
 
-        return $categorys;
+        return $res;
     }
 }
